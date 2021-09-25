@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System;
 using Microsoft.AspNetCore.Mvc;
-using ToDoList.Models;
+using VendorOrder.Models;
 
-namespace ToDoList.Controllers
+namespace VendorOrder.Controllers
 {
   public class VendorsController : Controller
   {
@@ -38,9 +38,6 @@ namespace ToDoList.Controllers
       model.Add("orders", vendorOrders);
       return View(model);
     }
-
-
-    // This one creates new Orders within a given Vendor, not new Vendors:
 
     [HttpPost("/vendors/{vendorId}/orders")]
     public ActionResult Create(int vendorId, string orderDescription)
