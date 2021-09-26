@@ -1,11 +1,44 @@
 @{
   Layout = "_Layout";
 }
+<div class = "container">
+  <h1>Order Details: </h1>
+  <div class = "text-area">
+    <div class = "row">
+      <div class = "col-md-6">
+        <h4>@Model["order"].Title</h4>
+      </div>
+      <div class = "col-md-6">
+        <h4>Vendor: @Model["vendor"].Name</h4>
+      </div>
+    </div>
+  </div>
+  <div class = "text-area">
+    <div class = "row">
+      <div class = "col-md-4">
+        Description: @Model["order"].Description
+      </div>
+      <div class = "col-md-4">
+        Price: @Model["order"].Price
+      </div>
+      <div class = "col-md-4">
+        Date: @Model["order"].Date
+      </div>
+    </div>
+  </div>
+  <div class = "text-area">
+    <div class = "row">
+      <div class = "col-md-6">
+        <a href='/vendors/@Model["vendor"].Id/orders/new'>Add another order</a>
+      </div>
+      <div class = "col-md-6">
+        <a href='/orders'>View all orders</a>
+      </div>
+    </div>
+  </div>
 
-<h1>Order Details: </h1>
 
-<h2>@Model["order"].Description</h2>
-<h3>Vendor: @Model["vendor"].Name</h3>
 
-<a href='/vendors/@Model["vendor"].Id/orders/new'>Add another order</a>
-<a href='/orders'>View all orders</a>
+
+
+</div>
