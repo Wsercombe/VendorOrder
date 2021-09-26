@@ -4,14 +4,34 @@
 
 
 <div class = "container">
-  <h1>Add a vendor</h1>
+  <div class = "text-area">
+    <h1>Add a vendor</h1>
+  </div>
+
 
   <form action="/vendors" method="post">
-    <label for="vendorName">Vendor name</label>
-    <input id="vendorName" name="vendorName" type="text">
-    <button type="submit">Add</button>
+    <div class = "text-area">
+      <label for="vendorName">Vendor name</label>
+      <input id="vendorName" name="vendorName" type="text">
+    </div>
+    <div class = "text-area">
+      <label for="vendorDescription">Vendor discription</label>
+      <input id="vendorDescription" name="vendorDescription" type="text">     
+    </div>
+    <div class = "text-area">
+      <button type="submit">Add</button>      
+    </div>
   </form>
 
-  <p><a href="/">Back home</a></p>
-  <p><a href="/vendors">Back to vendors.</a></p>
+  <div class = "text-area">
+    <div class = "row">
+      <div class = "col-md-6">
+        <h4><a href="/">Back home</a></h4>
+      </div>
+      <div class = "col-md-6">
+        <h4><a href="/vendors">Back to vendors</a></h4>
+      </div>
+    </div>
+  </div>
+
 </div>
