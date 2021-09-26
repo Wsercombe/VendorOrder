@@ -4,15 +4,33 @@
 
 @using VendorOrder.Models;
 
-<h3>Here are all the orders for this vendor:</h3>
 
-<ol>
-@foreach (Order order in @Model["orders"])
-{
-  <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Description</a></li>
-}
-</ol>
+<div class = "container">
+  <div class = "text-area">
+    <h3>Here are all the orders for this vendor:</h3>
+  </div>
 
-<p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a></p>
-<p><a href='/vendors'>Return to vendor list</a></p>
-<p><a href='/'>Return to Main Page</a></p>
+  <ol>
+  @foreach (Order order in @Model["orders"])
+  {
+    <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Description</a></li>
+  }
+  </ol>
+  <div class = "text-area">
+    <div class = "row">
+      <div class = "col-md-6">
+        <h4><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a></h4>
+      </div>
+
+      <div class = "col-md-6">
+        <h4><a href='/vendors'>Return to vendor list</a></h4>        
+      </div>
+    </div>
+
+
+
+  </div>
+
+
+
+</div>
